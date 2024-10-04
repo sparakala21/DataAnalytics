@@ -1,0 +1,25 @@
+> summary(lin.mod.epinew)
+
+Call:
+lm(formula = EPI_data$EPI ~ EPI_data$ECO + EPI_data$BDH + EPI_data$PAR + 
+    EPI_data$SPI + EPI_data$TBN, data = EPI_data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-10.3952  -2.8076  -0.2119   3.2522   9.9781 
+
+Coefficients:
+               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   1.2065701  1.6383516   0.736    0.463    
+EPI_data$ECO  1.3794693  0.0596760  23.116  < 2e-16 ***
+EPI_data$BDH -0.5560973  0.0634929  -8.758 3.34e-15 ***
+EPI_data$PAR  0.0047616  0.0206752   0.230    0.818    
+EPI_data$SPI  0.0207311  0.0255663   0.811    0.419    
+EPI_data$TBN  0.0007526  0.0200788   0.037    0.970    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.611 on 154 degrees of freedom
+  (20 observations deleted due to missingness)
+Multiple R-squared:  0.8556,	Adjusted R-squared:  0.8509 
+F-statistic: 182.4 on 5 and 154 DF,  p-value: < 2.2e-16
