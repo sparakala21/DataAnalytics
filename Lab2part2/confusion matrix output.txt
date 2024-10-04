@@ -1,0 +1,26 @@
+table(predict(classifier, abalone[,2:4]), abalone$age.group, dnn=list('predicted','actual'))
+         actual
+predicted young adult  old
+    young   988   291   79
+    adult   406  1172  564
+    old      13   347  317
+> classifier<- naiveBayes(abalone[,5], abalone$age.group)
+> table(predict(classifier, abalone[,5]), abalone$age.group, dnn=list('predicted','actual'))
+         actual
+predicted young adult  old
+    young     0     0    0
+    adult  1407  1810  960
+    old       0     0    0
+Warning message:
+In predict.naiveBayes(classifier, abalone[, 5]) :
+  Type mismatch between training and new data for variable 'x'. Did you use factors with numeric labels for training, and numeric values for new data?
+> classifier<- naiveBayes(abalone[,7:8], abalone$age.group)
+> table(predict(classifier, abalone[,7:8]), abalone$age.group, dnn=list('predicted','actual'))
+         actual
+predicted young adult  old
+    young  1164   461  148
+    adult   239  1144  573
+    old       4   205  239
+> plot(function(x) dnorm(x, mean_1 ,sd_1), 0, 8, col="red", main="feature distribution or length whole weight and viscera weight")
+> curve(dnorm(x, mean_2, sd_2), add=TRUE, col="blue")
+> curve(dnorm(x, mean_3, sd_3 ), add=TRUE, col = "green")
