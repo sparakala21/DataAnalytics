@@ -1,0 +1,8 @@
+                           Actual
+Predicted                   Global West Greater Middle East Latin America & Caribbean
+  Global West                        19                   0                         0
+  Greater Middle East                 0                  11                         4
+  Latin America & Caribbean           2                   4                        22
+> accuracy2 <- sum(diag(cm2)) / sum(cm2)
+> print(paste("Accuracy for Model 2:", round(accuracy2, 4)))
+[1] "Accuracy for Model 2: 0.8387"

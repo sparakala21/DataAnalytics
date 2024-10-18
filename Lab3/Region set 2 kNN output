@@ -1,0 +1,7 @@
+                       Actual
+  Predicted            Former Soviet States Sub-Saharan Africa
+  Former Soviet States                    9                  1
+  Sub-Saharan Africa                      3                 40
+> accuracy1 <- sum(diag(cm1)) / sum(cm1)
+> print(paste("Accuracy for Model 1:", round(accuracy1, 4)))
+[1] "Accuracy for Model 1: 0.9245"
